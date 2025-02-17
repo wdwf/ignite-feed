@@ -1,3 +1,4 @@
+import { Avatar } from './Avatar'
 import { Comment } from './Comment'
 import styles from './Post.module.css'
 
@@ -6,10 +7,10 @@ export function Post(props) {
         <article className={styles.post}>
             <header>
                 <div className={styles.author}>
-                    <img className={styles.avatar} src="https://github.com/wdwf.png" />
+                    <Avatar src="https://github.com/expo-starter.png" />
                     <div className={styles.authorInfo}>
-                        <strong>Weslley Ferreira</strong>
-                        <span>Web Developer</span>
+                        <strong>Cyber Dev</strong>
+                        <span>Fullstack Developer</span>
                     </div>
                 </div>
 
@@ -20,7 +21,7 @@ export function Post(props) {
 
                 <p>Acabei de subir mais um projeto no meu portifa. É um projeto que fiz no NLW Return, evento da Rocketseat. O nome do projeto é DoctorCare 🚀</p>
 
-                <p><a href="">👉 jane.design/doctorcare</a></p>
+                <p><a href="">👉 cyber.design/doctorcare</a></p>
 
                 <p><a href="">#novoprojeto</a> <a href="">#nlw</a> <a href="">#rocketseat</a></p>
             </div>
