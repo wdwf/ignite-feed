@@ -21,15 +21,15 @@ export function Comment({ content, onDeleteComment }: CommentProps) {
 
     return (
         <div className={styles.comment}>
-            <Avatar hasBorder={false} src="https://github.com/shadcn.png" />
+            <Avatar hasBorder={false} src="https://github.com/rodrigobranas.png" />
             <div className={styles.commentBox}>
                 <div className={styles.commentContent}>
                     <header>
                         <div className={styles.authorAndTime}>
-                            <strong>Bob Bobistico</strong>
+                            <strong>Rodriguinho</strong>
                             <time title="11 de Maio ás 08:13h" dateTime="2024-05-11 08:13:38">Cerca de 1h atrás</time>
                         </div>
-                        <button onClick={() => handleDeleteComment} title='Deletar comentário'>
+                        <button onClick={() => handleDeleteComment()} title='Deletar comentário'>
                             <Trash size={24} />
                         </button>
                     </header>

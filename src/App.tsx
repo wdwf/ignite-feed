@@ -1,20 +1,20 @@
 import { Header } from "./components/Header"
 import { Sidebar } from "./components/Sidebar"
-import { Post } from "./components/Post"
+import { Post, PostType } from "./components/Post"
 import styles from './App.module.css'
 
-const posts = [
+const posts: PostType[] = [
   {
     id: 1,
     author: {
-      avatarUrl: 'https://github.com/expo-starter.png',
-      name: 'Cyber Dev',
-      role: 'Software Engineer'
+      avatarUrl: 'https://github.com/oFhelipe.png',
+      name: 'Fhelipe Rodrigues',
+      role: 'Fullstack Developer'
     },
     content: [
-      { type: 'paragraph', content: 'Fala galera, beleza?' },
-      { type: 'paragraph', content: 'Estou fazendo um post para testar o componente de postagem.' },
-      { type: 'link', content: 'post.dev/feedignite' }
+      { type: 'paragraph', content: 'Belezinha Pessoal 👋' },
+      { type: 'paragraph', content: 'Finalmente lancei meu portifolio e ficou massinha demais. Dá uma olhada lá e me diz o que achou!!' },
+      { type: 'link', content: 'https://fhelipe.dev/' }
     ],
     publishedAt: new Date('2025-02-17 17:23:00')
   },
@@ -26,8 +26,8 @@ const posts = [
       role: 'Fullstack Developer'
     },
     content: [
-      { type: 'paragraph', content: 'Fala galera, beleza?' },
-      { type: 'paragraph', content: 'Estou fazendo um post para testar o componente de postagem.' },
+      { type: 'paragraph', content: 'Fala galera!!' },
+      { type: 'paragraph', content: 'Estou fazendo um negocio loco aqui aguardem novidades 🐱‍👤.' },
       { type: 'link', content: 'post.dev/feedignite' }
     ],
     publishedAt: new Date('2025-02-15 20:03:00')
@@ -46,9 +46,7 @@ function App() {
             posts.map(post => (
               <Post
                 key={post.id}
-                author={post.author}
-                content={post.content}
-                publishedAt={post.publishedAt}
+                post={post}
               />
             ))
           }
